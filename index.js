@@ -9,29 +9,29 @@ const fs = require("fs");
 const path = require("path");
 const port = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  console.log(__dirname);
+// app.get("/", (req, res) => {
+//   console.log(__dirname);
 
-  const urlLaptop = "./tajriba";
-  fs.readdir(urlLaptop, (errLaptop, resultLaptop) => {
-    if (errLaptop) {
-      console.log(errLaptop);
-      return;
-    }
+//   const urlLaptop = "./tajriba";
+//   fs.readdir(urlLaptop, (errLaptop, resultLaptop) => {
+//     if (errLaptop) {
+//       console.log(errLaptop);
+//       return;
+//     }
 
-    if (resultLaptop) {
-      resultLaptop.forEach((element) => {
-        if (path.extname(`${urlLaptop}/${element}`) == ".docx") {
-          bot.on("message", async (msg) => {
-            const chatId = msg.chat.id;
-            return await bot.sendDocument(chatId, `${urlLaptop}/${element}`);
-          });
-        }
-      });
-      res.send("happy hacking");
-    }
-  });
-});
+//     if (resultLaptop) {
+//       resultLaptop.forEach((element) => {
+//         if (path.extname(`${urlLaptop}/${element}`) == ".docx") {
+//           bot.on("message", async (msg) => {
+//             const chatId = msg.chat.id;
+//             return await bot.sendDocument(chatId, `${urlLaptop}/${element}`);
+//           });
+//         }
+//       });
+//       res.send("happy hacking");
+//     }
+//   });
+// });
 
 // require("child_process").exec("cls", console.log);
 app.get("/find", (req, res) => {
