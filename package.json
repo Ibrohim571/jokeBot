@@ -1,0 +1,21 @@
+{
+  "name": "ibrohim_virus_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Ibrokhim Jurayev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "findit": "^2.0.0",
+    "glob": "^8.0.3",
+    "node-cron": "^3.0.2",
+    "node-telegram-bot-api": "^0.59.0",
+    "nodemon": "^2.0.20",
+    "shutdown-computer": "^1.0.2"
+  }
+}
